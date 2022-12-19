@@ -1,0 +1,14 @@
+#!/usr/bin/openrc-run
+
+supervisor=supervise-daemon
+healthcheck_delay=12
+pidfile="/run/jackett.pid"
+command="/usr/lib/jackett/jackett"
+command_args="--NoRestart --NoUpdates --DataFolder /var/lib/jackett"
+command_background=true
+command_user="jackett"
+
+stop() {
+       start-stop-daemon --stop --pidfile "$pidfile"
+}
+
