@@ -25,7 +25,7 @@ Enable the script through OpenRC
 ```bash
 sudo rc-update add jackett.initd
 ```
-(Optional) If you want to start jackett without having to restart your computer, start the service through OpenRC manually
+**(Optional)** If you want to start jackett without having to restart your computer, start the service through OpenRC manually
 ```bash
 sudo rc-service jackett.initd start
 ```
